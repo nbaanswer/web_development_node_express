@@ -11,6 +11,12 @@ app.set('port',process.env.PORT || 3000);
 
 app.use(express.static(__dirname + '/public'));
 
+app.use(function(req,res,next){
+    res.locals.showTests = app.get('env') !== 'production' &&
+        req.query.test === '1';
+    next();
+});
+
 app.get("/",function(req,res){
     res.render('home');
 });
@@ -18,6 +24,7 @@ app.get("/",function(req,res){
 app.get("/about",function(req,res){
     res.render('about',{fortune:fortunes.getFortune()});
     });
+
 
 app.use(function(req,res,next){
     res.type('text/plain');
