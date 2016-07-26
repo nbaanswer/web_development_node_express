@@ -1,16 +1,30 @@
 {
-  "name": "hellowebnodech2",
-  "version": "1.0.0",
+  "name": "web_node_express4",
+  "version": "1.0.2",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "",
+  "author": "nbaanswer",
   "license": "ISC",
-  "description": "",
+  "description": "It`s my first github repository for web_node_express",
   "dependencies": {
     "express": "^4.14.0",
     "express3-handlebars": "^0.5.2"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nbaanswer/web_development_node_express.git"
+  },
+  "keywords": [
+    "web",
+    "nodejs",
+    "express4"
+  ],
+  "bugs": {
+    "url": "https://github.com/nbaanswer/web_development_node_express/issues"
+  },
+  "homepage": "https://github.com/nbaanswer/web_development_node_express#readme"
 }
