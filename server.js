@@ -6,6 +6,7 @@ var fortunes = require('./lib/fortune.js');
 
 app.engine('handlebars', handlebars .engine);
 app.set('view engine', 'handlebars');
+app.set('view cache',false);
 
 app.set('port',process.env.PORT || 3000);
 
@@ -22,6 +23,10 @@ app.use(function(req,res,next){
 
 app.get("/",function(req,res){
     res.render('home');
+
+    var s='';
+    for(var name in req.headers) s += name + ":" + req.headers[name] + '\n';
+    console.log(s);
 });
 
 app.get("/about",function(req,res){
